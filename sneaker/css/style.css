@@ -1,0 +1,182 @@
+@charset "utf-8";
+html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,:after,:before{background-repeat:no-repeat;box-sizing:inherit}:after,:before{text-decoration:inherit;vertical-align:inherit}*{padding:0;margin:0;box-sizing:border-box;}audio:not([controls]){display:none;height:0}hr{overflow:visible}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}summary{display:list-item}small{font-size:80%}[hidden],template{display:none}abbr[title]{border-bottom:1px dotted;text-decoration:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}code,kbd,pre,samp{font-family:monospace,monospace}b,strong{font-weight:bolder}dfn{font-style:italic}mark{background-color:#ff0;color:#000}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}input{border-radius:0}[role=button],[type=button],[type=reset],[type=submit],button{cursor:pointer}[disabled]{cursor:default}[type=number]{width:auto}[type=search][type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}textarea{overflow:auto;resize:vertical}button,input,optgroup,select,textarea{font:inherit}optgroup{font-weight:700}button{overflow:visible}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:0;padding:0}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button:-moz-focusring{outline:1px dotted}[type=reset],[type=submit],button,html [type=button]button,select{text-transform:none}button,input,select,textarea{background-color:transparent;border-style:none;color:inherit}select::-ms-expand{display:none}select::-ms-value{color:currentColor}legend{border:0;color:inherit;display:table;max-width:100%;white-space:normal}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}[type=search]img{border-style:none;vertical-align: bottom}progress{vertical-align:baseline}svg:not(:root){overflow:hidden}audio,canvas,progress,video{display:inline-block}@media screen{[hidden~=screen]{display:inherit}[hidden~=screen]:not(:active):not(:focus):not(:target){position:absolute!important;clip:rect(0 0 0 0)!important}}[aria-busy=true]{cursor:progress}[aria-controls]{cursor:pointer}[aria-disabled]{cursor:default}::-moz-selection{background-color:#b3d4fc;color:#000;text-shadow:none}::selection{background-color:#b3d4fc;color:#000;text-shadow:none}ul,ol{list-style:none;}a{text-decoration:none;}img{max-width: 100%;vertical-align: bottom;}
+
+#text path {
+    fill: #fff;
+    stroke: #111;
+    stroke-width: 1.8px;
+    stroke-dasharray: 1100px;
+    stroke-dashoffset: 1100px;
+    animation: text 6s 0.6s forwards;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes text {
+    0% {
+      stroke-dashoffset: 1100px;
+    }
+    100% {
+      stroke-dashoffset: 0;
+      fill: #111;
+    }
+  }
+
+header #local-nav{
+    max-width: 960px; 
+    height: 50px;
+    margin: 0 auto;
+    color: #069dfbd7;
+    /* position: relative; */
+} 
+header h1 {
+     font-family: 'Kiwi Maru', serif; 
+    font-size: 50px;
+    color: #754d1277;
+  }
+#local-nav{
+    width: 100%;
+    height:60px;
+    position: fixed;
+}
+#local-nav ul{
+    display: flex;
+    justify-content: flex-end;
+}
+#local-nav li{
+    text-align: center;
+}
+#local-nav a{
+    display: block;
+    padding: 20px ;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}
+#nav a:hover{
+    text-decoration: underline;
+    color:#069dfbd7;
+
+}
+
+  .animation {
+    animation-name: animation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    margin-bottom: 10px;
+    /* animation-play-state: paused; */
+    /* animation-play-state: running; */
+    /* animation-iteration-count: 1; */
+    /* animation-timing-function: step-end; */
+    animation-fill-mode: none;
+    animation-direction: alternate;
+  }
+  .fadein {
+    position: fixed;
+  }
+  @keyframes animation {
+    0% {
+      top: 0;
+      left: 10%;
+    }
+  
+    30% {
+      top: 10px;
+      left: 30%;
+    }
+  
+    70% {
+      top: 20%;
+      right: 30%;
+    }
+  
+    100% {
+     top: 10%;
+      right: -100%;
+    }
+  }
+  .snow {
+    max-width: 100%;
+    color: snow;
+    /*雪の色*/
+    font-size: 8px;
+    /*雪の大きさ*/
+    position: fixed;
+    /*雪の位置を指定-ランダムな数値を入れて雪をあちこちに降らせる*/
+    text-shadow: 3vw -100px 1px, 10vw -200px 3px, 15vw -700px 4px, 20vw -500px 7px, 25vw -500px 2px, 30vw -300px 1px, 36vw -400px 2px, 40vw -150px 6px, 47vw -840px 2px, 50vw -300px 5px, 60vw -200px 3px, 68vw -100px 5px, 70vw -250px 1px, 80vw -620px 9px, 90vw -800px 4px;
+    /*アニメーションの指定*/
+    animation: snow 5s linear infinite;
+  }
+  
+  @keyframes snow {
+    0% {
+      top: 0;
+    }
+  
+    100% {
+      top: 100%;
+    }
+  }
+   
+.box{
+    background-color: cornflowerblue;
+}
+.container{
+    max-width: 960px;
+    margin: 100px auto;
+}
+.grid{
+    display: grid;
+    /* grid-template-columns: repeat(4,1fr); */
+    grid-template-columns: repeat(auto-fit,min-max(280px,1fr));
+    grid-auto-rows: 180px;
+    gap: 40px;
+    margin-bottom: 100px;
+}
+.grid img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.grid li{
+    border: 1px solid #000000;
+}
+.grid1{
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+.grid10{
+    grid-column:3/5 ;
+    grid-row: 3/5; 
+}  
+.parallax1{
+    width: 100%;
+    height: 100vh;
+    background: url(../img/sneaker1920.webp) no-repeat bottom center/cover fixed;
+}
+.parallax2{
+    width: 100%;
+    height: 100vh;
+    background: url(../img/shoes-gf21afb77f_1920.webp) no-repeat center center/cover fixed;
+}
+footer{
+    height: 200px;
+    text-align: center;
+    background-color: #9bc7f9;
+    padding-top: 80px;
+}
+
+/* ------@media----------- */
+ @media (max-width:400px){ 
+header{
+  width: 100%;
+  height: 50px;
+}
+.parallax2{
+    background: url(../img/shoes-gf21afb77f_1920.webp) no-repeat center right/cover fixed;
+
+  }
+ .grid{
+    width: 100%;
+    grid-template-columns: repeat(1,1fr);
+  }
+  } 
