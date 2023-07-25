@@ -1,0 +1,144 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+}
+ul {list-style: none;}
+a {text-decoration: none;}
+img {vertical-align: bottom;} /* リセットCSS */
+
+/* 共通部分 */
+header {
+  padding: 30px 0;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Train One', cursive;
+  font-size: 50px;
+}
+
+.g-nav{
+  width: 100%;
+  height: 50px;
+  background-color: #EB7A77;
+  margin-bottom: 80px;
+}
+
+.g-nav>ul{
+  /* 子セレクタ */
+  display: flex;
+  width: 960px;
+  /*navにw入れるとカラーが切れてしまうのでulにw持たせる  */
+  margin: 0 auto;
+}
+
+.g-nav li{
+  /* 子孫セレクタ */
+  width: 20%;
+}
+
+.g-nav a{
+  display: block;
+  line-height: 50px;
+  /* .g-navのhightと同じ高さにする */
+  text-align: center;
+  color: #fff;
+  border-right: 1px solid  #fff;
+}
+
+.g-nav a:hover {
+  background-color: #a2110c;
+}
+
+.g-nav li:first-of-type>a{
+  border-left: #fff solid 1px;
+  /* 疑似クラス>子セレクタ 1番最初の要素にだけ命令する */
+}
+main {
+  width: 960px;
+  margin: 0 auto 100px;
+}
+
+
+
+
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: #EB7A77;
+}
+
+footer>p {
+  color: #fff;
+  text-align: center;
+  line-height: 100px;
+  /* footer height同数 */
+}
+
+/* TOPページ部分 */
+.main-visual{
+  margin-bottom: 50px;
+}
+
+.main-txt{
+  text-align: center;
+}
+
+.main-txt>h2 {
+  margin-bottom: 30px;
+}
+
+.main-txt>p {
+  margin: 0 auto;
+  width: 600px;
+  line-height: 1.6;
+}
+
+/* 季節ページ部分 */
+main .page{
+  display: flex;
+}
+
+.page-img {
+  margin-right: 30px;
+}
+.page-txt>h2{
+  margin-bottom: 20px;
+}
+
+.page-txt>p{
+  line-height: 1.8;
+}
+
+/* 個別ページ */
+#spring>.g-nav,#spring>footer {
+  background-color: #E16B8C;
+}
+#spring>,g-nav a:hover{
+  background-color: #fff;
+}
+
+#summer>.g-nav,#summer>footer {
+  background-color: #005CAF;
+}
+#summer>.g-nav a:hover{
+  background-color: #b6d8f6;
+}
+#fall>.g-nav,#fall>footer {
+  background-color: #6A4028;
+}
+#fall>.g-nav a:hover{
+  background-color: #faccb2;
+}
+
+#winter>.g-nav,#winter>footer {
+  background-color: #5c5d5f;
+}
+#winter>.g-nav a:hover{
+  background-color: #150f0f;
+}
